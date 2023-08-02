@@ -1,1 +1,1 @@
-web: gunicorn --chidir avocatura avocatura.wsgi –log-file -
+web: gunicorn --chidir avocatura avocatura.wsgi:application –log-file -
