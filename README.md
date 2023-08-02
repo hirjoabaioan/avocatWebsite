@@ -1,0 +1,2 @@
+# avocatWebsite
+My Django project
