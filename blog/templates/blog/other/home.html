@@ -1,0 +1,80 @@
+{% extends 'blog/base.html' %} {% load static %} {% block title%}Acasă {%endblock %} {% block link %} <link rel="stylesheet" href="{% static 'css/homestyle.css' %}" /> {% endblock %} {% block content %}
+<header class="header_h pri_h">
+  <img src="{% static 'images/CAB.jpg' %}" alt="banner" />
+</header>
+
+<div class="sticky-top bg-white hidden-spacer"></div>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Birou de avocatură</h1>
+    <h2>Cabinet de avocat „Popescu Ion”</h2>
+
+    <p class="lead">Suntem o echipă de avocați dedicați și experimentați, specializați în diverse domenii ale dreptului. Oferim servicii juridice complete și de calitate, adaptate nevoilor și cerințelor fiecărui client în parte. În cadrul cabinetului nostru, vă punem la dispoziție o gamă largă de servicii, printre care se numără consultanță juridică, reprezentare în instanță, mediere, redactare de contracte și multe altele. Suntem mereu la dispoziția dumneavoastră și vă oferim soluții juridice eficiente și personalizate. Pentru a afla mai multe despre serviciile noastre și despre cum vă putem ajuta, vă invităm să ne contactați. Vă stăm la dispoziție cu orice informație și vă oferim consultanță gratuită în vederea identificării celor mai bune soluții pentru situația dumneavoastră.</p>
+  </div>
+  <!-- <div class="divider"></div> -->
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container container_box">
+      <div class="up_box">
+        <div class="">
+          <h3><span class="headline">Cu ce mă ocup</span></h3>
+          <h1 id="no-l">Domenii de activitate</h1>
+          <p>Pentru a vă oferi cele mai bune servicii pentru nevoile dumneavoastră.</p>
+          <hr />
+        </div>
+        <!-- <div class="right"></div> -->
+      </div>
+      <div class="down_box">
+        <div class="row_wrapper">
+          <div class="cell">
+            <a href="{%  url 'blog:activity_domain_1' %}">
+              <div class="img">
+                <img src="{% static 'images/icon.png' %}" alt="" />
+              </div>
+              <header class="box_header">
+                <h2 class="header_title">Consultanță juridică</h2>
+                <p class="header_text">Asistență și îndrumare în diverse domenii legale.</p>
+              </header>
+            </a>
+          </div>
+          <div class="cell">
+            <a href="{%  url 'blog:activity_domain_2' %}">
+              <div class="img">
+                <img src="{% static 'images/icon.png' %}" alt="" />
+              </div>
+              <header class="box_header">
+                <h2 class="header_title">Reprezentare în instanță</h2>
+                <p class="header_text">Dreptul procesual al părților de a-și apăra interesele în fața organelor de jurisdicție.</p>
+              </header>
+            </a>
+          </div>
+        </div>
+        <div class="row_wrapper">
+          <div class="cell">
+            <a href="{%  url 'blog:activity_domain_3' %}">
+              <div class="img">
+                <img src="{% static 'images/icon.png' %}" alt="" />
+              </div>
+              <header class="box_header">
+                <h2 class="header_title">Mediere</h2>
+                <p class="header_text">Formă alternativă de rezolvare a disputelor între două sau mai multe părți ce doresc să ajungă la o înțelegere.</p>
+              </header>
+            </a>
+          </div>
+          <div class="cell">
+            <a href="{%  url 'blog:activity_domain_4' %}">
+              <div class="img">
+                <img src="{% static 'images/icon.png' %}" alt="" />
+              </div>
+              <header class="box_header">
+                <h2 class="header_title">Redactare de contracte</h2>
+                <p class="header_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </header>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

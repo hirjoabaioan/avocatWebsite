@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Distribuie o postare{% endblock %}
+
+{% block content %}
+  {% if sent %}
+    <h1>E-mail trimis cu succes</h1>
+    <p>
+      "{{ post.title }}" a fost trimis cu succes către {{ form.cleaned_data.to }}.
+    </p>
+  {% else %}
+    <h1>Distribuie "{{ post.title }}" prin e-mail</h1>
+    <form method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Send e-mail">
+    </form>
+  {% endif %}
+{% endblock %}

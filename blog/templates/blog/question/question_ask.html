@@ -1,0 +1,37 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% load blog_tags %}
+
+{% block title %}Întreabă{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/blogstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div class="big">
+        <div>
+            <header class="header"></header>
+            <div class="sticky-top bg-white hidden-spacer"> </div>
+        </div>
+
+        <div id="cont">
+            <div id="sidebar">
+            {% include "blog/post/blog.html" %}
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>Adresează o întrebare</h1>
+                    {% if new_question %}
+                        <h2>Întrebarea a fost înregistrată și urmează a fi aprobată.</h2>
+                    {% else %}
+                        <h2>Adaugă o întrebare</h2>
+                        <form method="post" id="formplacing">
+                            {{ question_form.as_p }}
+                            {% csrf_token %}
+                            <p><input type="submit" value="Trimite"></p>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Reprezentare în instanță{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/domainsstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div>
+        <header class="header"></header>
+        <div class="sticky-top bg-white hidden-spacer"> </div>
+    </div>
+
+    <div id="cont">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container domains_box">
+                <div class="col-10">
+                    <h1>Reprezentare în instanță</h1>
+                    <p>
+                        Reprezentarea în instanță este dreptul procesual al părților de a-și apăra interesele în fața organelor de jurisdicție prin intermediul unor persoane împuternicite. 
+                        Reprezentarea poate fi legală sau convențională, în funcție de sursa împuternicirii. Reprezentarea legală este cea care rezultă din lege sau din actele constitutive 
+                        ale persoanelor juridice. Reprezentarea convențională este cea care se bazează pe o procură autentificată notarial, prin care partea își desemnează reprezentantul.
+                    </p>
+                </div>
+                <div class="image col-2">
+                    <img src="{% static 'images/law.jpeg' %}" alt="Reprezentare în instanță">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+={% endblock %}

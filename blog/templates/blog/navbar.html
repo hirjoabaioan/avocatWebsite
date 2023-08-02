@@ -1,0 +1,116 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+  <div class="mx-auto order-0">
+    <a class="navbar-brand md-auto" href="/">
+      <img
+        src="{% static 'images/icon.png' %}"
+        width="30"
+        height="30"
+        class="d-inline-block align-top"
+        alt="Scale"
+        loading="lazy"
+      />
+      Popescu Ion
+    </a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+
+  <div
+    class="collapse navbar-collapse w-100 order-mr-0"
+    id="navbarSupportedContent"
+  >
+    {% with request.resolver_match.url_name as url_name %}
+    <ul class="navbar-nav ml-auto">
+      <!-- {% with request.resolver_match.url_name as url_name %}
+                  <ul id="menu">
+                      <li class="{% if url_name == 'home' %}active{% endif %}">Home</li>
+                      <li class="{% if url_name == 'blog' %}active{% endif %}">Posts</li>
+                      <li class="{% if url_name == 'contact' %}active{% endif %}">Contact</li>
+                  </ul>
+              {% endwith %} -->
+      <li class="nav-item {% if url_name == 'home' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'blog:home' %}"
+          >Acasă<span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li class="nav-item {% if url_name == 'fees' %}active{% endif %}">
+        <a class="nav-link" href="{% url 'blog:fees' %}">Onorarii</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Blog
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a
+            class="dropdown-item {% if url_name == 'post_list' %}active{% endif %}"
+            href="{%  url 'blog:post_list' %}"
+            >Blog</a
+          >
+          <a
+            class="dropdown-item {% if url_name == 'question-list' %}active{% endif %}"
+            href="{%  url 'blog:question-list' %}"
+            >Întrebări</a
+          >
+        </div>
+      </li>
+      <li class="nav-item {% if url_name == 'contact' %}active{% endif %}">
+        <a class="nav-link" href="{%  url 'blog:contact' %}">Contact</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          class="nav-link dropdown-toggle"
+          href="#"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          Domenii
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a
+            class="dropdown-item {% if url_name == 'activity_domain_1' %}active{% endif %}"
+            href="{%  url 'blog:activity_domain_1' %}"
+            >Consultanță juridică</a
+          >
+          <a
+            class="dropdown-item {% if url_name == 'activity_domain_2' %}active{% endif %}"
+            href="{%  url 'blog:activity_domain_2' %}"
+            >Reprezentare</a
+          >
+          <a
+            class="dropdown-item {% if url_name == 'activity_domain_3' %}active{% endif %}"
+            href="{%  url 'blog:activity_domain_3' %}"
+            >Mediere</a
+          >
+          <a
+            class="dropdown-item {% if url_name == 'activity_domain_4' %}active{% endif %}"
+            href="{%  url 'blog:activity_domain_4' %}"
+            >Redactare</a
+          >
+        </div>
+      </li>
+    </ul>
+    {% endwith %}
+  </div>
+</nav>

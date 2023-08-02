@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}Întrebări{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/blogstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div class="big">
+        <div>
+            <header class="header"></header>
+            <div class="sticky-top bg-white hidden-spacer"> </div>
+        </div>
+
+        <div id="cont">
+            <div id="sidebar">
+                {% include "blog/post/blog.html" %}
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>Întrebările dumneavoastră</h1>
+                    {% for post in posts %}
+                        <div class="box">
+                            <div class="box_title">
+                                <h2>
+                                    <a href="{{ post.get_absolute_url }}">
+                                        {{ post.title }}
+                                    </a>
+                                </h2>
+                              <p class="date">
+                                  Publicată {{ post.publish }} de către Anonim.
+                              </p>
+                            </div>
+                            <div class="box_content">
+                                {{ post.body|markdown|truncatewords_html:30 }}
+                          </div>
+                      </div>
+                      {% endfor %}
+                      {% include "pagination.html" with page=posts %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

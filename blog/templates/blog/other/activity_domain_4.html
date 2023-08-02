@@ -1,0 +1,31 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Redactarea de contracte{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/domainsstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div>
+        <header class="header"></header>
+        <div class="sticky-top bg-white hidden-spacer"> </div>
+    </div>
+
+    <div id="cont">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container domains_box">
+                <div class="col-10">
+                    <h1>Redactarea de contracte</h1>
+                    <p>
+                        Redactarea de contracte este o activitate care presupune respectarea unor reguli și principii juridice, dar și a unei anumite tehnici de exprimare. 
+                        Un contract este un acord între două sau mai multe părți care își asumă reciproc drepturi și obligații. Pentru ca un contract să fie valabil, 
+                        el trebuie să îndeplinească anumite condiții de formă și de fond.
+                    </p>
+                </div>
+                <div class="image col-2">
+                    <img src="{% static 'images/law.jpeg' %}" alt="Redactarea de contracte">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+={% endblock %}

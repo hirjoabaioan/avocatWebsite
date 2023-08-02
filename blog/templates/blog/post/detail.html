@@ -1,0 +1,42 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}{{ post.title }}{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/blogstyle.css' %}"> {% endblock %}
+
+{% block content %}
+  <div class="big">
+      <div>
+          <header class="header"></header>
+          <div class="sticky-top bg-white hidden-spacer"> </div>
+      </div>
+
+      <div id="cont">
+          <div id="sidebar">
+            {% include "blog/post/blog.html" %}
+          </div>
+          <div class="jumbotron jumbotron-fluid">
+              <div class="container">
+                    <h1>{{ post.title }}</h1>
+                    <div class="detail_box">
+                        <p class="date">
+                            Publicată {{ post.publish }} de către {{ post.author }}
+                        </p>
+                        {{ post.body|linebreaks }}
+
+                        <h2>Postări similare</h2>
+                        {% for post in similar_posts %}
+                            <p>
+                                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                            </p>
+                        {% empty %}
+                            Nu există încă postări similare.
+                        {% endfor %}
+                    </div>
+              </div>
+          </div>
+      </div>
+  </div>
+        
+{% endblock %}

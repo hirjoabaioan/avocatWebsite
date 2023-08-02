@@ -1,0 +1,47 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}Întrebări{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/blogstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div class="big">
+        <div>
+            <header class="header"></header>
+            <div class="sticky-top bg-white hidden-spacer"> </div>
+        </div>
+
+        <div id="cont">
+            <div id="sidebar">
+              {% include "blog/post/blog.html" %}
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                    <h1>{{ post.title }}</h1>
+                    <div class="detail_box"></div>
+                    <p class="date">
+                      Publicată {{ post.publish }} de către Anonim {{ post.author }}
+                    </p>
+                    {{ post.body|linebreaks }}
+
+                    <hr>
+
+                    <div class="comment-box">
+
+                        {% for comment in comments %}
+                            <div class="comment">
+                              <p class="info">
+                                {{ comment.name }} a răspuns pe {{ comment.created }} la această întrebare:
+                              </p>
+                              <span class="ident"></span>{{ comment.body }}
+                            </div>
+                          {% empty %}
+                            <p>Nu există încă un răspuns.</p>
+                          {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

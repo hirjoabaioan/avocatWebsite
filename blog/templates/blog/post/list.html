@@ -1,0 +1,58 @@
+{% extends "blog/base.html" %}
+{% load static %}
+{% load blog_tags %}
+
+{% block title %}Blog{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/blogstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div class="big">
+        <div>
+            <header class="header"></header>
+            <div class="sticky-top bg-white hidden-spacer"> </div>
+        </div>
+
+        <div id="cont">
+            <div id="sidebar">
+                {% include "blog/post/blog.html" %}
+            </div>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                      <h1>Postări</h1>
+                      
+                      {% if tag %}
+                        <h2>Postări cu tagul "{{ tag.name }}"</h2>
+                      {% endif %}
+                      {% for post in posts %}
+                        <div class="box">
+                            <div class="box_title">
+                                <h2>
+                                  <a href="{{ post.get_absolute_url }}">
+                                    {{ post.title }}
+                                  </a>
+                                </h2>
+                                <p class="tags">
+                                  Taguri:
+                                  {% for tag in post.tags.all %}
+                                    <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                      {{ tag.name }}
+                                    </a>
+                                    {% if not forloop.last %}, {% endif %}
+                                  {% endfor %}
+                                </p>
+                                <p class="date">
+                                  Publicată {{ post.publish }} de către {{ post.author }}
+                                </p>
+                            </div>
+                            <div class="box_content">
+                                {{ post.body|markdown|truncatewords_html:30 }}
+                            </div>
+                        </div>
+                      {% endfor %}
+                      {% include "pagination.html" with page=posts %}       
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

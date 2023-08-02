@@ -1,0 +1,54 @@
+{% load blog_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Blog{% endblock %}</title>
+  
+  <link rel="icon" href="{% static 'images/icon.png' %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/basestyle.css' %}">
+  {% block link %}{% endblock %}
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+    <div id="navig">
+
+        <div id="nav">
+          {% include "blog/navbar.html" %}
+        </div>
+    </div>
+
+    <div id="content">
+      <header class="header pri" id="header_base"></header>
+      {% block content %}
+        
+      
+      {% endblock %}
+
+      <div class="push"></div>
+    </div>
+
+    <!-- <div class="push"></div> -->
+
+    <footer class="footer">
+        <div class="footer_wrapper">
+            <div>
+                <a href=""></a>
+            </div>
+            <p class="footer_text">
+                &copy; Copyrights 2020 | Carmen Petrescu
+            </p>
+        </div>
+    </footer>
+    
+
+  <script src="{% static 'js/basejs.js' %}"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+  </script>
+</body>
+</html>

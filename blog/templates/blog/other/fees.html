@@ -1,0 +1,45 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Onorarii{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/feesstyle.css' %}"> {% endblock %}
+
+{% block content %}
+
+    <div>
+        <header class="header"></header>
+        <div class="sticky-top bg-white hidden-spacer"> </div>
+    </div>
+
+    <div id="cont">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1>Onorarii</h1>
+                <div class="fees_box">
+                    <h3>
+                        ONORARIILE PERCEPUTE SE STABILESC ÎN FUNCȚIE DE:
+                    </h3>
+                        <ul>
+                            <li>natura cauzei;</li>
+                            <li>complexitatea operațiunilor juridice;</li>
+                            <li>durata preconizata de derulare a procesului;</li>
+                            <li>cuantumul evaluării în bani a cauzei dedusa judecății;</li>
+                            <li>distanta pana la locul situării instantei competente.</li>
+                        </ul>
+
+                    <h3>
+                        ONORARIILE SE STABILESC, ÎN PLUS FAȚĂ DE CRITERIILE DE MAI SUS ÎN:
+                    </h3>
+                        <ul>
+                            <li>onorarii fixe (pentru fiecare etapa procesuala);</li>
+                            <li>onorarii orare (referitoare la consultanta);</li>
+                            <li>onorarii de succes;</li>
+                            <li>cuantumul evaluării în bani a cauzei dedusa judecății;</li>
+                            <li>onorarii combinate (onorarii fixe + onorarii de succes + onorarii orare).</li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>   
+        
+{% endblock %}

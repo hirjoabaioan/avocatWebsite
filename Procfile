@@ -1,0 +1,1 @@
+web: gunicorn <avocatura>.wsgi -log-file -

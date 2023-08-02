@@ -1,0 +1,91 @@
+.header_h {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* min-height: 500px; */
+  background-size: 100%;
+  /* background-image: url("../images/CAB.jpg"); */
+}
+
+.pri_h {
+  background-attachment: fixed;
+  /* background-attachment: center; */
+  background-repeat: no-repeat;
+}
+
+.container_box {
+  background-color: none;
+}
+
+.headline {
+  font-size: 0.5em;
+  color: rgba(16, 97, 16, 0.781);
+  font-style: italic;
+}
+
+#no-l {
+  border-bottom: none;
+}
+
+.container h2 {
+  padding-bottom: 2rem;
+}
+
+.lead {
+  text-indent: 2rem;
+}
+
+.up_box {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.left {
+  /* padding-left: 40px; */
+  order: 0;
+}
+
+.right {
+  /* padding-right: 40px; */
+  order: 1;
+  width: 70%;
+}
+
+.down_box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.row_wrapper {
+  /* padding: 60px; */
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.cell {
+  padding: 10px;
+}
+
+.cell a {
+  text-decoration: none;
+  color: rgb(24, 46, 24);
+}
+
+.cell img {
+  width: 50px;
+  height: 50px;
+}
+
+.cell:hover {
+  background-color: rgba(209, 209, 209, 0.082);
+  box-shadow: 2px 3px 10px rgb(7, 39, 68);
+  border-radius: 5px;
+  filter: blur(0.3px);
+}
+
+.cell a:hover {
+  color: rgb(35, 85, 35);
+}

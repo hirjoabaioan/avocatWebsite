@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %}Mediere{% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/domainsstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div>
+        <header class="header"></header>
+        <div class="sticky-top bg-white hidden-spacer"> </div>
+    </div>
+
+    <div id="cont">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container domains_box">
+                <div class="col-10">
+                    <h1>Mediere</h1>
+                    <p>
+                        Medierea este o formă alternativă de rezolvare a disputelor între două sau mai multe părți ce doresc să ajungă la o înțelegere, cu ajutorul unei terțe persoane, 
+                        specializate în calitate de mediator. Medierea poate fi folosită pentru a soluționa conflicte de natură civilă, comercială, familială, penală sau administrativă. 
+                        Avantajele medierii sunt: economisirea timpului și a costurilor procesului judiciar, păstrarea confidențialității și a relațiilor dintre părți, crearea unor soluții 
+                        personalizate și satisfăcătoare pentru toți implicații. Procedura de mediere presupune ca părțile să depună o notificare privind intenția de mediere la organul 
+                        fiscal competent și să participe la o întâlnire cu mediatorul în termen de 10 zile. În cadrul întâlnirii, mediatorul îi asistă pe părți să clarifice situația obligațiilor 
+                        fiscale și să identifice posibile soluții de stingere a acestora.
+                    </p>
+                </div>
+                <div class="image col-2">
+                    <img src="{% static 'images/law.jpeg' %}" alt="Mediere">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+={% endblock %}

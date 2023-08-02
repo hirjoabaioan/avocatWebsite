@@ -1,0 +1,132 @@
+
+#cont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+
+a { 
+    color:#18550c;
+    text-decoration:none; 
+}
+
+#sidebar {
+    align-items: flex-start;
+    order: 0;
+    width: 400px;
+    height: 600px;
+    margin-top: -100px;
+    margin-left: 5px;
+    padding: 10px;
+    background-color: rgb(163, 179, 163);
+    box-shadow: 3px 4px 10px rgba(114, 113, 113, 0.705);
+}
+
+.ancs a{
+    color: rgb(115, 128, 0);
+}
+
+.ask {
+    text-align: center;
+    color: green;
+}
+
+.jumbotron {
+    order: 1;
+    margin-left: 30px;
+    margin-top: 100px;
+    margin-bottom: 300px;
+}
+
+p.date { 
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.detail_box {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+/* Pagination  */
+.pagination { 
+    margin:40px 0; 
+    font-weight:bold;
+}
+
+.pagination a{
+    color: green;
+}
+
+.pagination a:hover{
+    color: rgb(182, 182, 16);
+}
+
+/* Tags */
+
+.tags a{
+    color: rgb(19, 19, 112);
+}
+
+/* Forms */
+label { 
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px; 
+}
+input, textarea { 
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#ededed;
+    border:0;
+    padding:6px 10px;
+    font-size:12px;
+}
+input[type=submit] {
+    font-weight:bold;
+    background:#00abff;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase; 
+}
+.errorlist { 
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px; 
+}
+
+#formplacing {
+    float:right;
+}
+
+/* comments */
+.comment-box {
+    margin-top: 80px;
+}
+
+.ident {
+    padding-left: 40px;
+}
+
+.comment {
+    padding: 20px;
+    background-color: lightgrey;
+    border-radius: 2%;
+    box-shadow: 3px 5px 5px grey;
+}
+.comment:nth-child(even) {
+    background:#efefef;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}
+

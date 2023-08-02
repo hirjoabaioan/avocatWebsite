@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block title %} Consultanță juridică {% endblock %}
+{% block link %} <link rel="stylesheet" href="{% static 'css/domainsstyle.css' %}"> {% endblock %}
+
+{% block content %}
+    <div>
+        <header class="header"></header>
+        <div class="sticky-top bg-white hidden-spacer"> </div>
+    </div>
+
+    <div id="cont">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container domains_box">
+                <div class="col-10">
+                    <h1>Consultanță juridică</h1>
+                    <p>
+                        Consultanță juridică este un serviciu profesional care oferă asistență și îndrumare în diverse domenii legale, cum ar fi dreptul comercial, dreptul muncii, dreptul administrativ și fiscal, 
+                        proprietatea intelectuală etc. Scopul consultanței juridice este de a preveni litigiile și situațiile neplăcute, de a proteja interesele și drepturile clienților și de a facilita realizarea 
+                        obiectivelor lor. Consultanța juridică poate fi oferită de avocați specializați în diferite ramuri ale dreptului sau de firme de consultanță care au o echipă multidisciplinară de experți. 
+                        Consultanța juridică se bazează pe o analiză atentă a situației concrete a fiecărui client, pe o cunoaștere profundă a cadrului legislativ aplicabil și pe formularea de recomandări practice 
+                        și eficiente.
+                    </p>
+                </div>
+                <div class="image col-2">
+                    <img src="{% static 'images/law.jpeg' %}" alt="Consultanță juridică">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+={% endblock %}

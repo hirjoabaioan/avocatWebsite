@@ -1,0 +1,47 @@
+
+#box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+#mapcontainer {
+    order: 0;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+}
+
+#map {
+    width: 500px;
+    height: 100%;
+}
+
+
+#formplacing {
+    order: 1;
+
+}
+
+#info {
+    margin-top: 50px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+#info ul {
+    list-style-type: none;
+}
+
+.info_span {
+    font-weight: normal;
+    font-style: italic;
+    size: 10px;
+    color: grey;
+}

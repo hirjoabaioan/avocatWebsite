@@ -1,0 +1,19 @@
+.domains_box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image {
+    width: 80%;
+    height: 40vh;
+    margin-left: 50px;
+    padding: 0;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+}
