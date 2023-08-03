@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_heroku
-from decouple import config
 import dj_database_url
+from decouple import config
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -33,7 +33,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', cast=bool)
 
 # ALLOWED_HOSTS = ['avocaturaweb.herokuapp.com']
-ALLOWED_HOSTS = ['avocatwebsite-536ffabbed2c.herokuapp.com', '127.0.0.1']
+# ALLOWED_HOSTS = ['avocatwebsite-536ffabbed2c.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -134,10 +135,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'mains/static/'),
     os.path.join(BASE_DIR, 'blog/static/'),
