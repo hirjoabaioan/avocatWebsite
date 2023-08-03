@@ -1,1 +1,1 @@
-web gunicorn avocatura.wsgi:application --log-file -
+web: gunicorn avocatura.wsgi:application --log-file -
