@@ -1,0 +1,14 @@
+{
+    "builds": [
+        {
+            "src": "avocatura/wsgi.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "avocatura/wsgi.py"
+        }
+    ]
+}
