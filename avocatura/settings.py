@@ -95,6 +95,12 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'URL': 'postgresql://postgres:B0FIziweKT5yneTpxdRw@containers-us-west-46.railway.app:7695/railway',
+        'USER': 'railway',
+        'HOST': 'containers-us-west-46.railway.app',
+        'PASSWORD': 'B0FIziweKT5yneTpxdRw',
+        'PORT': '7695',
+        'USER': 'postgres',
     }
 }
 
